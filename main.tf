@@ -1,8 +1,16 @@
+terraform {
+  required_providers {
+    snowflake = {
+      source  = "chanzuckerberg/snowflake"
+      version = "0.22.0"
+    }
+  }
+}
+
 provider "snowflake" {
     alias = "security_admin"
     role  = "SECURITYADMIN"
 }
-
 
 resource "snowflake_role" "role" {
     provider = snowflake.security_admin
