@@ -14,12 +14,12 @@ provider "snowflake" {
 
 resource "snowflake_database" "db" {
   provider = snowflake.sys_admin
-  name     = "TF_DEMO"
+  name     = "FF_DEMO"
 }
 
 resource "snowflake_warehouse" "warehouse" {
   provider       = snowflake.sys_admin
-  name           = "TF_DEMO"
+  name           = "FF_DEMO"
   warehouse_size = "large"
 
   auto_suspend = 60
